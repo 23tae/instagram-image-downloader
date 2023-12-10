@@ -55,19 +55,6 @@ os.path.exists(out_dir) or os.makedirs(out_dir)
 
 for i in range(10):
     try:
-        # # Check for video element
-        # video_element = driver.find_element(
-        #     By.CSS_SELECTOR, 'xb88tzc.xw2csxc.x1odjw0f.x5fp0pe.x1qjc9v5.xjbqb8w.x1lcm9me.x1yr5g0i.xrt01vj.x10y3i5r.xr1yuqi.xkrivgy.x4ii5y1.x1gryazu.x15h9jz8.x47corl.xh8yej3.xir0mxb.x1juhsu6')
-
-        # if video_element:
-        #     # Skip to the next post if it's a video
-        #     driver.find_element(By.CSS_SELECTOR, '._aaqg ._abl-').click()
-        #     continue
-
-        # driver.implicitly_wait(1)
-        # Download image if it's not a video
-        # img_element = driver.find_element(
-        #     By.CSS_SELECTOR, '._aatk .x5yr21d.xu96u03.x10l6tqk.x13vifvy.x87ps6o.xh8yej3')
         img_elements = driver.find_elements(
             By.CSS_SELECTOR, '._aatk .x5yr21d.xu96u03.x10l6tqk.x13vifvy.x87ps6o.xh8yej3')
         if img_elements == None:
