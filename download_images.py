@@ -9,6 +9,8 @@ import urllib.request
 import ssl
 import os
 
+image_number = 20
+
 
 def run_webdriver(my_account: dict, profiles: list[tuple]):
     driver = set_options()
@@ -51,7 +53,7 @@ def move_main_page(my_account: dict, driver: webdriver):
 
 
 def save_image(driver, category, name):
-    print('Saving images of ' + name)
+    print('Downloading images of ' + name)
     profile_url = 'https://www.instagram.com/' + name
     driver.get(profile_url)
 
@@ -63,7 +65,7 @@ def save_image(driver, category, name):
     out_dir = os.path.join(os.getcwd(), 'result', category, name)
     os.path.exists(out_dir) or os.makedirs(out_dir)
 
-    for i in range(50):
+    for i in range(image_number):
         try:
             img_elements = driver.find_elements(
                 By.CSS_SELECTOR, '._aatk .x5yr21d.xu96u03.x10l6tqk.x13vifvy.x87ps6o.xh8yej3')
