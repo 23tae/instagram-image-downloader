@@ -22,3 +22,7 @@ user4
 ```
 
 2. `python3 main.py`로 실행
+
+- 현재 수집 개수: 20 (`download_images.py`의 `image_number` 변경)
+
+3. 이미지는 `./result/<hashtag>/<user>/`에 저장됨
